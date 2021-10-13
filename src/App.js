@@ -1,12 +1,13 @@
-import Header from "./Header/Header";
-import Navbar from "./Navbar/Navbar";
+import Header from "./Components/Header/Header";
+import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
+import PostView from './Pages/PostView/PostView'
 
 function App() {
   return (
     <>
     <Navbar />
-    <Home />
+    <PostView />
     </>
   );
 }
