@@ -6,7 +6,6 @@ import SinglePost from '../../Components/SinglePost/SinglePost'
 export default function PostView() {
     return (
         <div className="postView">
-            something
             <SinglePost />
             <Sidebar />
             
