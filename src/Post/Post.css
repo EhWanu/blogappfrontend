@@ -17,5 +17,27 @@
 }
 
  .postCat{
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Varela Round', sans-serif; 
+    font-size: 11px;
+    color: #be9656;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+ }
+
+ .postTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 15px;
+    cursor: pointer;
+ }
+
+ .postDate {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #999;
+    margin-top: 15px;
  }
