@@ -9,7 +9,7 @@ export default function SinglePost() {
                     alt="" 
                     className="singlePostImg" 
                 />
-                <h1 className="singPostTitle">
+                <h1 className="singlePostTitle">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     <div className="singlePostEdit">
                         <i className="singlePostIcon far fa-edit"></i>
