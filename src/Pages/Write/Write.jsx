@@ -8,7 +8,7 @@ export default function Write() {
                     <label htmlFor="fileInput">
                     <i class="fas fa-plus"></i>
                     </label>
-                    <input type="file" id='fileInput' />
+                    <input type="file" id='fileInput' style={{display: "none"}} />
                     <input type="text" placeholder="Title" />
                 </div>
             </form>
