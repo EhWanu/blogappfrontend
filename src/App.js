@@ -14,6 +14,7 @@ import Settings from "./Pages/Settings/Settings";
 import Write from "./Pages/Write/Write";
 
 function App() {
+	const user = false;
 	return (
 		<Router>
 			<Navbar />
@@ -22,16 +23,16 @@ function App() {
 					<Home />
 				</Route>
 				<Route path="/register">
-					<Register />
+					{user ? <Home /> : <Register />}
 				</Route>
 				<Route path="/login">
-					<Login />
+					{user ? <Home /> : <Login />}
 				</Route>
 				<Route path="/write">
-					<Write />
+					{user ? <Write /> : <Login />}
 				</Route>
 				<Route path="/settings">
-					<Settings />
+					{user ? <Settings /> : <Login />}
 				</Route>
 				<Route path="/post/:postId">
 					<PostView />
