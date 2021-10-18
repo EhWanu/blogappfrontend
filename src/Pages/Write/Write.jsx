@@ -3,17 +3,27 @@ import './Write.css';
 export default function Write() {
     return (
         <div className="write">
+            <img
+                className="writeImg" 
+                src="https://images.pexels.com/photos/293029/pexels-photo-293029.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
+                alt="" 
+            />
             <form className="writeForm">
                 <div className="writeFormGroup">
                     <label htmlFor="fileInput">
-                    <i class="fas fa-plus"></i>
+                    <i className="writeIcon fas fa-plus"></i>
                     </label>
                     <input type="file" id='fileInput' style={{display: "none"}} />
-                    <input type="text" placeholder="Title" className="writeInput" autofocus={true} />
+                    <input type="text" placeholder="Title" className="writeInput" autoFocus={true} />
                 </div>
                 <div className="writeFormGroup">
-                    <textarea plaholder="Tell Your Story..." type="text" className="writeInput writeText"></textarea>
+                    <textarea 
+                        placeholder="Tell Your Story..." 
+                        type="text" 
+                        className="writeInput writeText">
+                    </textarea>
                 </div>
+                <button className="writeSubmit">Publish</button>
             </form>
         </div>
     )
