@@ -1,50 +1,36 @@
 import "./Post.css";
+import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
 	return (
 		<div className="post">
-			<img
-				className="postImg"
-				src="https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80"
-				alt=""
-			/>
+			{post.photo && (
+				<img
+					className="postImg"
+					src={post.photo}
+					alt=""
+				/>
+			)}
 			<div className="postInfo">
 				<div className="postCats">
-					<span className="postCat">Music</span>
-					<span className="postCat">Life</span>
+					{post.categories.map((c) => (
+						<span className="postCat">{c.name}</span>
+					))}
 				</div>
-				<span className="postTitle">
-					{post.title}
-				</span>
+				<Link
+					to={`/post/${post._id}`}
+					className="link"
+				>
+					<span className="postTitle">
+						{post.title}
+					</span>
+				</Link>
 				<hr />
 				<span className="postDate">
-					{post.createdAt}
+					{new Date(post.createdAt).toDateString()}
 				</span>
 			</div>
-			<p className="postDescription">
-				Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Voluptates molestias debitis
-				alias nesciunt. Magnam numquam, ducimus
-				repellat vitae et aliquam dolor quae velit,
-				beatae molestias veniam nulla? Deleniti,
-				officia inventore. Lorem ipsum dolor sit amet
-				consectetur adipisicing elit. Voluptates
-				molestias debitis alias nesciunt. Magnam
-				numquam, ducimus repellat vitae et aliquam
-				dolor quae velit, beatae molestias veniam
-				nulla? Deleniti, officia inventore. Lorem
-				ipsum dolor sit amet consectetur adipisicing
-				elit. Voluptates molestias debitis alias
-				nesciunt. Magnam numquam, ducimus repellat
-				vitae et aliquam dolor quae velit, beatae
-				molestias veniam nulla? Deleniti, officia
-				inventore. Lorem ipsum dolor sit amet
-				consectetur adipisicing elit. Voluptates
-				molestias debitis alias nesciunt. Magnam
-				numquam, ducimus repellat vitae et aliquam
-				dolor quae velit, beatae molestias veniam
-				nulla? Deleniti, officia inventore.
-			</p>
+			<p className="postDescription">{post.desc}</p>
 		</div>
 	);
 }
