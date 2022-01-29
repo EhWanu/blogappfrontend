@@ -2,9 +2,8 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link,
 } from "react-router-dom";
-import Header from "./Components/Header/Header";
+
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";

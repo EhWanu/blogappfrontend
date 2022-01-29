@@ -15,6 +15,7 @@ export const ContextProvider = ({ children }) => {
 		Reducer,
 		INITIAL_STATE
 	);
+
 	return (
 		<Context.Provider
 			value={{
