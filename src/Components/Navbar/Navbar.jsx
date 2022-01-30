@@ -55,16 +55,13 @@ export default function Navbar() {
 							</Link>
 						</li>
 						<li className="topListItem">
-							<Link
-								className="link"
-								to="/register"
-							>
+							<Link className="link" to="/register">
 								REGISTER
 							</Link>
 						</li>
 					</ul>
 				)}
-				<i class="topSearchIcon fas fa-search"></i>
+				<i className="topSearchIcon fas fa-search"></i>
 			</div>
 		</div>
 	);
