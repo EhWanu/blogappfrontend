@@ -11,9 +11,11 @@ import PostView from "./Pages/PostView/PostView";
 import Register from "./Pages/Register/Register";
 import Settings from "./Pages/Settings/Settings";
 import Write from "./Pages/Write/Write";
+import { useContext } from "react";
+import { Context } from "./Context/Context";
 
 function App() {
-	const user = false;
+	const { user } = useContext(Context);
 	return (
 		<Router>
 			<Navbar />
