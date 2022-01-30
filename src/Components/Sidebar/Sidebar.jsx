@@ -31,10 +31,11 @@ export default function Sidebar() {
 					CATEGORIES{" "}
 				</span>
 				<ul className="sidebarList">
-					{cats.map((c) => (
+					{cats.map((c, index) => (
 						<Link
 							to={`/?cat=${c.name}`}
 							className="link"
+							key={index}
 						>
 							<li className="sidebarListItem">
 								{c.name}
