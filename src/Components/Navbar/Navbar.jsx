@@ -4,8 +4,10 @@ import { useContext } from "react";
 import { Context } from "../../Context/Context";
 
 export default function Navbar() {
-	const { user } = useContext(Context);
-
+	const { user, dispatch } = useContext(Context);
+	const handleLogout = () => {
+		dispatch({ type: "LOGOUT" });
+	};
 	return (
 		<div className="top">
 			<div className="topLeft">
@@ -36,7 +38,10 @@ export default function Navbar() {
 							WRITE
 						</Link>
 					</li>
-					<li className="topListItem">
+					<li
+						className="topListItem"
+						onClick={handleLogout}
+					>
 						<Link className="link" to="/">
 							{user && "LOGOUT"}
 						</Link>
@@ -47,7 +52,7 @@ export default function Navbar() {
 				{user ? (
 					<img
 						className="topImg"
-						src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2885&q=80"
+						src={user.profilePic}
 						alt=""
 					/>
 				) : (
