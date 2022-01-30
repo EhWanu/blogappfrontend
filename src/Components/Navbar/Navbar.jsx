@@ -1,8 +1,11 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../Context/Context";
 
 export default function Navbar() {
-	const user = true;
+	const { user } = useContext(Context);
+
 	return (
 		<div className="top">
 			<div className="topLeft">
