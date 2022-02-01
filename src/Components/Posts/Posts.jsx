@@ -4,8 +4,8 @@ import "./Posts.css";
 export default function Posts({ posts }) {
 	return (
 		<div className="posts">
-			{posts.map((p, index) => (
-				<Post post={p} key={index} />
+			{posts.map((p) => (
+				<Post post={p} />
 			))}
 		</div>
 	);
