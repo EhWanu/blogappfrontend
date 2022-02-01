@@ -69,7 +69,7 @@ export default function Write() {
 				</div>
 				<div className="writeFormGroup">
 					<textarea
-						placeholder="Tell Your Story..."
+						placeholder="Tell your story..."
 						type="text"
 						className="writeInput writeText"
 						onChange={(e) => setDesc(e.target.value)}

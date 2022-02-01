@@ -17,7 +17,8 @@ export default function SinglePost() {
 	const { user } = useContext(Context);
 	const [title, setTitle] = useState("");
 	const [desc, setDesc] = useState("");
-	const [updateMode, setUpdateMode] = useState("");
+	const [updateMode, setUpdateMode] =
+		useState(false);
 
 	useEffect(() => {
 		const getPost = async () => {
@@ -34,7 +35,6 @@ export default function SinglePost() {
 			await axios.delete(`/posts/${post._id}`, {
 				data: { username: user.username },
 			});
-			//HOMEPAGE REDIRECT
 			window.location.replace("/");
 		} catch (err) {}
 	};
@@ -49,6 +49,7 @@ export default function SinglePost() {
 			setUpdateMode(false);
 		} catch (err) {}
 	};
+
 	return (
 		<div className="singlePost">
 			<div className="singlePostWrapper">
@@ -59,13 +60,12 @@ export default function SinglePost() {
 						className="singlePostImg"
 					/>
 				)}
-				{/* OPERATION MAKES POST TITLE AN INPUT IN updateMode */}
 				{updateMode ? (
 					<input
 						type="text"
 						value={title}
 						className="singlePostTitleInput"
-						autofocus
+						autoFocus
 						onChange={(e) => setTitle(e.target.value)}
 					/>
 				) : (
@@ -92,24 +92,21 @@ export default function SinglePost() {
 							to={`/?user=${post.username}`}
 							className="link"
 						>
-							<b>{post.username}</b>
+							<b> {post.username}</b>
 						</Link>
 					</span>
 					<span className="singlePostDate">
 						{new Date(post.createdAt).toDateString()}
 					</span>
 				</div>
-				{/* OPERATION MAKES POST DESCRIPTION A TEXTAREA IN updateMode */}
 				{updateMode ? (
 					<textarea
-						className="singlePostDescriptionInput"
+						className="singlePostDescInput"
 						value={desc}
 						onChange={(e) => setDesc(e.target.value)}
 					/>
 				) : (
-					<p className="singlePostDescription">
-						{desc}
-					</p>
+					<p className="singlePostDesc">{desc}</p>
 				)}
 				{updateMode && (
 					<button
