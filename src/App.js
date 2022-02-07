@@ -1,6 +1,6 @@
 import {
 	BrowserRouter as Router,
-	Switch,
+	Routes,
 	Route,
 } from "react-router-dom";
 
@@ -19,7 +19,7 @@ function App() {
 	return (
 		<Router>
 			<Navbar />
-			<Switch>
+			<Routes>
 				<Route exact path="/">
 					<Home />
 				</Route>
@@ -38,7 +38,7 @@ function App() {
 				<Route path="/post/:postId">
 					<PostView />
 				</Route>
-			</Switch>
+			</Routes>
 		</Router>
 	);
 }
