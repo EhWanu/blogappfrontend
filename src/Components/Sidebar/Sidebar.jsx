@@ -46,7 +46,7 @@ export default function Sidebar() {
 			</div> */}
 			<div className="sidebarItem">
 				<span className="sidebarTitle">
-					FOLLOW US
+					FOLLOW US!
 				</span>
 				<div className="sidebarSocial">
 					<i className="sidebarIcon fab fa-facebook-square"></i>
